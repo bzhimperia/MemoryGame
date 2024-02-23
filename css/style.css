@@ -1,0 +1,49 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+  flex-wrap: wrap;
+}
+
+#score,
+#move {
+  width: 100%;
+  color: green;
+  text-align: center;
+  font-size: 3rem;
+}
+.memory-game {
+  display: grid;
+  grid-template-columns: repeat(
+    4,
+    100px
+  ); /* Ajustez le nombre de colonnes selon vos besoins */
+  gap: 10px;
+}
+
+.card {
+  width: 100px;
+  height: 150px; /* Ajustez la hauteur selon vos besoins */
+  background-color: #3498db;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card.matched {
+  background-color: #2ecc71;
+  cursor: default;
+}
+
+.card.flipped {
+  background-color: #e74c3c;
+}
